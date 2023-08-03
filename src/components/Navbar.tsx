@@ -1,51 +1,47 @@
-import { motion } from "framer-motion";
+import { FaDiceD6 } from "react-icons/fa";
 
 const Navbar = () => {
-  const navbarAnimation = {
-    hidden: {
-      y: -100,
-    },
-    show: {
-      y: 0,
-      transition: {
-        delay: 3.9,
-        duration: 0.5,
-      },
-    },
-  };
   return (
-    <motion.nav
-      className="flex justify-between items-center pt-4 relative z-50"
-      variants={navbarAnimation}
-      initial="hidden"
-      animate="show"
-    >
-      <div>
-        <h1 className="font-bold text-xl">Art-Life</h1>
+    <nav className="fixed top-0 w-full flex justify-between items-center p-4 bg-teal-500 text-white z-50">
+      <div className="flex items-center flex-shrink-0 text-xl">
+        <FaDiceD6 className="mr-2" />
+        <h1 className="font-semibold tracking-tight">StarGlobe Technologies</h1>
       </div>
-      <ul className="w-[250px] flex justify-between items-center">
+      <ul className=" flex justify-between items-center">
         <li>
-          <a href="#" className="text-sm font-semibold">
-            Art
+          <a
+            href="#"
+            className="text-sm font-semibold text-teal-200 hover:text-white mr-4"
+          >
+            Home
           </a>
         </li>
         <li>
-          <a href="#" className="text-sm font-semibold">
-            Painting
+          <a
+            href="#"
+            className="text-sm font-semibold text-teal-200 hover:text-white mr-4"
+          >
+            Feactures
           </a>
         </li>
         <li>
-          <a href="#" className="text-sm font-semibold">
-            Discover
+          <a
+            href="#"
+            className="text-sm font-semibold text-teal-200 hover:text-white mr-4"
+          >
+            Services
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="text-sm font-semibold text-teal-200 hover:text-white mr-4"
+          >
+            Support
           </a>
         </li>
       </ul>
-      <div>
-        <a href="#" className="text-sm font-semibold">
-          Contact
-        </a>
-      </div>
-    </motion.nav>
+    </nav>
   );
 };
 

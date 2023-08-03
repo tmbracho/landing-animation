@@ -69,59 +69,60 @@ const App = () => {
     },
   };
   return (
-    <div className="h-screen px-12 relative overflow-hidden">
+    <div>
+      {/* className="h-screen relative overflow-hidden" */}
       <Navbar />
 
-      <div className="absolute -top-12 -left-12 w-[300px] h-[300px] bg-[#AC7139] blur-[120px]" />
-      <div className="absolute bottom-0 -right-12 w-[300px] h-[300px] bg-[#749CB6] blur-[100px]" />
-      <div>
-        <motion.img
-          src="/images/circle.png"
-          alt="art"
-          className="w-[100px] absolute top-[100px] right-[380px] animate-spin-slow"
-          variants={circleAnimation}
-          initial="hidden"
-          animate="show"
-        />
-      </div>
-
-      <section className="h-[calc(100vh-80px)] flex flex-col items-center relative">
-        <div className="absolute left-[200px] top-[200px] h-[100px] flex items-center overflow-hidden">
-          <motion.div
-            variants={titleAnimation}
+      {/* <div className="absolute -top-12 -left-12 w-[300px] h-[300px] bg-[#AC7139] blur-[120px]" />
+      <div className="absolute bottom-0 -right-12 w-[300px] h-[300px] bg-[#749CB6] blur-[100px]" /> */}
+      {/* h-[calc(100vh-116px)] */}
+      {/* h-[500px]  */}
+      <section className="flex flex-col items-center mt-[60px]">
+        <div className="w-[500px] m-auto relative my-32">
+          <div className="absolute -left-[180px] top-[30px] h-[100px] flex items-center overflow-hidden">
+            <motion.div
+              variants={titleAnimation}
+              initial="hidden"
+              animate="show"
+              className="flex text-6xl font-bold text-orange-600 drop-shadow-lg z-30"
+            >
+              {Array.from("Net-Vision").map((letter, idx) => (
+                <motion.span key={idx} variants={titleAnimationChildren}>
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.div>
+          </div>
+          <motion.img
+            src="/images/circle.png"
+            alt="circle"
+            className="w-[100px] absolute -top-[65px] -right-[65px] animate-spin-slow"
+            variants={circleAnimation}
             initial="hidden"
             animate="show"
-            className="flex text-6xl font-bold text-[#e6951d] drop-shadow-lg z-50"
-          >
-            {Array.from("Gallery-Art").map((letter, idx) => (
-              <motion.span key={idx} variants={titleAnimationChildren}>
-                {letter}
-              </motion.span>
-            ))}
-          </motion.div>
-        </div>
-        <div className="w-[500px] m-auto">
+          />
           <motion.img
-            src="/images/img.webp"
+            src="/images/network_1920.jpg"
             alt="art"
-            className="object-cover"
+            className="object-cover rounded"
             variants={imgAnimation}
             initial="hidden"
             animate="show"
           />
+          <motion.div
+            className="bg-[#0e0e0e] p-4 w-[300px] absolute -bottom-[60px] -right-[120px] drop-shadow-lg z-30 rounded"
+            variants={explainAnimation}
+            initial="hidden"
+            animate="show"
+          >
+            <p className="text-[#eaeaea] text-sm text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+              interdum nisi eget nulla ultricies, eu ultrices dolor volutpat. In id purus
+              neque. Nulla auctor aliquam gravida. Aenean auctor pellentesque odio, eget
+              rutrum erat.
+            </p>
+          </motion.div>
         </div>
-        <motion.div
-          className="bg-[#0e0e0e] p-4 w-[300px] absolute bottom-[150px] right-[200px] drop-shadow-lg z-50"
-          variants={explainAnimation}
-          initial="hidden"
-          animate="show"
-        >
-          <p className="text-[#eaeaea] text-sm text-justify">
-            a building where paintings and other works of art are shown to the public.
-            Culture art galleries and museums of art. Shops that sell paintings are also
-            called galleries.
-          </p>
-        </motion.div>
       </section>
 
       <Footer />
