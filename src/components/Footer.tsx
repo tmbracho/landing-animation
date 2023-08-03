@@ -144,7 +144,7 @@ const Footer = () => {
         </ul> */}
       </div>
       <p className="text-xs text-gray-500 text-center pt-5">
-        © 2022. Company Name. All rights reserved.
+        © 2023. StarGlobe Technologies. All rights reserved.
       </p>
     </footer>
   );

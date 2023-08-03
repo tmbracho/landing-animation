@@ -70,13 +70,7 @@ const App = () => {
   };
   return (
     <div>
-      {/* className="h-screen relative overflow-hidden" */}
       <Navbar />
-
-      {/* <div className="absolute -top-12 -left-12 w-[300px] h-[300px] bg-[#AC7139] blur-[120px]" />
-      <div className="absolute bottom-0 -right-12 w-[300px] h-[300px] bg-[#749CB6] blur-[100px]" /> */}
-      {/* h-[calc(100vh-116px)] */}
-      {/* h-[500px]  */}
       <section className="flex flex-col items-center mt-[60px]">
         <div className="w-[500px] m-auto relative my-32">
           <div className="absolute -left-[180px] top-[30px] h-[100px] flex items-center overflow-hidden">
